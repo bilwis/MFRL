@@ -16,6 +16,9 @@ class MainState(GameState):
         pass
 
     def handle_input(self, key_event, player):
+        if key_event.key == 'ESCAPE':
+            exit(-1)
+
         if key_event.key == 'KP8':
             player.move(0, -1)
         elif key_event.key == 'KP2':
